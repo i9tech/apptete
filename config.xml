@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.listfy.diasdavila" version="1.6.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Listfy</name>
+<widget id="com.teteatete.coronel" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Tête a Tête</name>
     <description>
-    A cidade em suas mãos 
+    Aplicativo do programa Tête a Tête
     </description>
 
     <author href="http://i9techsolucoes.com.br" email="vinicio@i9techsolucoes.com.br">
@@ -74,26 +74,13 @@
         <param name="ios-package" onload="true" value="CDVStatusBar" />
 </feature>
 
-  <platform name="winphone" />
-  <platform name="ios" />
+<platform name="android">
+              <icon src="icon.png" />            
+     </platform>
 
 <icon src="icon.png" />
 
-<icon gap:platform="ios" height="60" width="60" src="res/icons/ios/icon-60.png" />
-<icon gap:platform="ios" height="120" width="120" src="res/icons/ios/icon-60-2x.png" />
-<icon gap:platform="ios" height="180" width="180" src="res/icons/ios/icon-60-3x.png" />
-<icon gap:platform="ios" height="76" width="76" src="res/icons/ios/icon-76.png" />
-<icon gap:platform="ios" height="152" width="152" src="res/icons/ios/icon-76-2x.png" />
-<icon gap:platform="ios" height="40" width="40" src="res/icons/ios/icon-40.png" />
-<icon gap:platform="ios" height="80" width="80" src="res/icons/ios/icon-40-2x.png" />
-<icon gap:platform="ios" height="57" width="57" src="res/icons/ios/icon-57.png" />
-<icon gap:platform="ios" height="114" width="114" src="res/icons/ios/icon-57-2x.png" />
-<icon gap:platform="ios" height="72" width="72" src="res/icons/ios/icon-72.png" />
-<icon gap:platform="ios" height="144" width="144" src="res/icons/ios/icon-72-2x.png" />
-<icon gap:platform="ios" height="29" width="29" src="res/icons/ios/icon-small.png" />
-<icon gap:platform="ios" height="58" width="58" src="res/icons/ios/icon-small-2x.png" />
-<icon gap:platform="ios" height="50" width="50" src="res/icons/ios/icon-50.png" />
-<icon gap:platform="ios" height="100" width="100" src="res/icons/ios/icon-50-2x.png" />       
+     
 
 
 </widget>
