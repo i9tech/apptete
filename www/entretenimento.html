@@ -1,4 +1,4 @@
-<ons-page ng-controller="EntretenimentoController">
+
 
     <ons-toolbar>
         <div class="left"><ons-back-button>Back</ons-back-button></div>
@@ -15,14 +15,6 @@
 
         <p style="padding-left: 5px; padding-top: 20px;" ng-bind-html="content"></p>
 
-        <p class="categories" ng-show="{{item.categories.length}}"><ons-icon icon="tags"></ons-icon>
-            <span ng-repeat="category in item.categories">{{category.title}} ({{category.post_count}}){{$last ? '' : ', '}}</span>
-        </p>
-
-        <p class="tags" ng-show="{{item.tags.length}}"><ons-icon icon="tags"></ons-icon>
-            <span ng-repeat="tag in item.tags">{{tag.title}} ({{tag.post_count}}){{$last ? '' : ', '}}</span>
-        </p>
-
 
         <ons-speed-dial position="right bottom">
             <ons-fab>
@@ -32,9 +24,7 @@
                         fixed-width="false"
                         style="vertical-align:middle;">
                 </ons-icon>
-            </ons-fab>
-            <ons-speed-dial-item ng-click="loadURL(item.url)"><ons-ripple></ons-ripple><ons-icon icon="ion-heart"></ons-icon></ons-speed-dial-item>
-            <ons-speed-dial-item><ons-ripple></ons-ripple><ons-icon icon="ion-chatboxes"></ons-icon></ons-speed-dial-item>
+            </ons-fab>            
             <ons-speed-dial-item ng-click="sharePost()"><ons-ripple></ons-ripple><ons-icon icon="ion-android-share-alt"></ons-icon></ons-speed-dial-item>
         </ons-speed-dial>
 
@@ -42,9 +32,8 @@
 
         <!-- Open the post using the InAppBrowser plugin (org.apache.cordova.inappbrowser) -->
         <ons-button modifier="large" ng-click="loadURL(item.url)" class="post-show-more">
-            Ver Matéria
+            
         </ons-button>
 
     </section>
     
-</ons-page>

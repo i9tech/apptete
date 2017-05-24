@@ -17,16 +17,44 @@
              <img style="width: 315px;" ng-src="img/logo.png"/>
              </div>
 
-             <div class="right">
-             <ons-toolbar-button onclick="myNavigator.pushPage('settings.html',{title: 'Settings', animation: 'slide'})">
-             <ons-icon icon="fa-info-circle">
-             </ons-toolbar-button>
-             </div>
 
          </ons-toolbar>
 
 
 <section ng-controller="PostsController" >
+
+         <div style="margin-left: 10px;">
+              <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FDeputadoCoronel&tabs=timeline&width=340&height=331&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="331" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+              </div>
+
+
+
+    <section ng-controller="EntretenimentosController">
+          
+            <ul rn-carousel  style="width: 33%; height: 220px; padding-top: 5px;   ">
+                <li ng-repeat="post in posts  | limitTo: paginationLimit()" style=" padding-right: 40px;" >
+            <div class="scroller" style="width: 150px;"  sliding-menu-ignore="true"> 
+            <div class="demo-card-wide-entretenimento mdl-card mdl-shadow--2dp" style="background: #da1b1b;">
+                <div ng-click="showDetail($index)" class="mdl-card__title" ng-style="{'background-image': 'url(' + post.thumbnail_images.medium_large.url + ')'}" style="color: #fff;
+                    height: 176px;
+                    background-size: cover;  background-position: center;">
+                </div>
+
+                <div class="mdl-card__actions mdl-card--border" style="background: #004979;">
+                    <h2 style="font-size: 12px; color: #fff; max-height: 55px;  overflow: hidden;
+    text-overflow: ellipsis;"  ng-bind-html="post.title" ng-click="showDetail($index)" class="mdl-card__title-text"></h2>
+                </div>
+
+            </div>
+            </div>
+
+
+                      </li>
+                    </ul>
+
+                     
+
+</section >
 
 
 
@@ -62,63 +90,8 @@
 
     </div>
 
-<section ng-controller="NoticiasitemController" sliding-menu-ignore="true">
-    <div class="noticias-carrosel" style="width: 100%; background: #f3f2f2;"  >
-         <ul rn-carousel style="width: 28%; ">
-            <li ng-repeat="post in posts  | limitTo: paginationLimit()" style=" padding-right: 10px;" >
-                    <div >
-                    <div class="demo-card-wide" >
-                      <div ng-click="detalhescat($index)" class="mdl-card__title" style="color: #fff; background: url('{{post.thumbnail_images.medium_large.url}}') center / cover; min-height: 100px; max-height: 100px;">
-                      <h4 ng-click="detalhescat($index)" class="cat-item-carrolsel" ng-bind-html="post.categories[0].title" ></h4>
-                    </div>
-
-                      <h3  class="title-noticias-item" ng-bind-html="post.title" ng-click="detalhescat($index)"></h3>
 
 
-                    </div>
-
-                    </div>
-            </li>
-          </ul>
-
-    </div>
-
-  </section>
-
-
-  
-
-    <section ng-controller="EntretenimentosController">
-        <div class="titulo-categoria-home">
-            <h3 style="color: #fff;  font-size: 21px; padding-left: 9px; margin: 2px; ">
-            <ons-icon icon="ion-android-arrow-dropright-circle" size="35px"></ons-icon>  Programas Tête a Tête</h3>
-            <p style="margin-left: 52px;margin-top: -17px;"></br></p>
-        </div>
-
-          
-            <ul rn-carousel  style="width: 33%; height: 220px;   ">
-                <li ng-repeat="post in posts  | limitTo: paginationLimit()" style=" padding-right: 40px;" >
-            <div class="scroller" style="width: 150px;"  sliding-menu-ignore="true"> 
-            <div class="demo-card-wide-entretenimento mdl-card mdl-shadow--2dp" style="background: #da1b1b;">
-                <div ng-click="showDetail($index)" class="mdl-card__title" ng-style="{'background-image': 'url(' + post.thumbnail_images.medium_large.url + ')'}" style="color: #fff;
-                    height: 176px;
-                    background-size: cover;  background-position: center;">
-                </div>
-
-                <div class="mdl-card__actions mdl-card--border" style="background: #004979;">
-                    <h2 style="font-size: 12px; color: #fff;"  ng-bind-html="post.title" ng-click="showDetail($index)" class="mdl-card__title-text"></h2>
-                </div>
-
-            </div>
-            </div>
-
-
-                      </li>
-                    </ul>
-
-                     
-
-</section >
 
 
 
