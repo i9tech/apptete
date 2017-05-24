@@ -54,6 +54,7 @@
 <preference name="android-minSdkVersion" value="16" />
 <preference name="android-targetSdkVersion" value="21" />
 <preference name="clickable" value="true" />
+<preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" />
 
 
 <!-- Core plugins -->
@@ -79,6 +80,8 @@
      </platform>
 
 <icon src="icon.png" />
+
+
 
      
 
