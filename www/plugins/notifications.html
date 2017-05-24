@@ -1,0 +1,22 @@
+<ons-page ng-controller="NotificationsController">
+    
+    <ons-toolbar>
+    <div class="left"><ons-back-button>Back</ons-back-button></div>
+    <div class="center">{{item.title}}</div>
+    </ons-toolbar>
+        
+    <section style="margin: 5px">
+        
+        <ons-row style="margin: 10px 0;">
+        <ons-col><section style="margin: 0 5px"><ons-button modifier="large" ng-click="alertNotify()">Alert</ons-button></section></ons-col>
+        <ons-col><section style="margin: 0 5px"><ons-button modifier="large" ng-click="beepNotify()">Beep</ons-button></section></ons-col>
+        </ons-row>
+
+        <ons-row style="margin: 10px 0;">
+        <ons-col><section style="margin: 0 5px"><ons-button modifier="large" ng-click="confirmNotify()">Confirm</ons-button></section></ons-col>
+        <ons-col><section style="margin: 0 5px"><ons-button modifier="large" ng-click="vibrateNotify()">Vibrate</ons-button></section></ons-col>
+        </ons-row>
+
+    </section>
+    
+</ons-page>

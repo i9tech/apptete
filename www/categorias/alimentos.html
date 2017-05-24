@@ -1,0 +1,31 @@
+<ons-page >
+ 
+    <ons-toolbar style="background:#536dfe;">
+    <div class="left"><ons-back-button>Voltar</ons-back-button></div>
+    <div style="float:right; margin-right: 30px;" class="right"><ons-icon icon="fa-cutlery" size="20px"></ons-icon>  Alimentos e Bebidas</div>
+    </ons-toolbar>
+
+    <section style="padding: 10px;">
+
+        <ons-navigator title="Navigator" id="appNavigator">
+  <ons-page>
+    <img ng-src="http://listfy.com.br/bannerscat/alimentos.gif" >
+    <ons-list>
+      <ons-list-item onclick="myNavigator.pushPage('categorias/categoria/alimentos/distribuidoras.html', { animation : 'slide' } )" class="list__item--tappable list__item__line-height" modifier="chevron">Distribuidoras</ons-list-item>
+      <ons-list-item onclick="myNavigator.pushPage('categorias/categoria/alimentos/mercados.html', { animation : 'slide' } )" class="list__item--tappable list__item__line-height" modifier="chevron">Mercados</ons-list-item>
+      <ons-list-item onclick="myNavigator.pushPage('categorias/categoria/alimentos/padarias.html', { animation : 'slide' } )" class="list__item--tappable list__item__line-height" modifier="chevron">Padarias, Confeitarias e Lanchonetes</ons-list-item>
+      <ons-list-item onclick="myNavigator.pushPage('categorias/categoria/alimentos/lanchonetes.html', { animation : 'slide' } )" class="list__item--tappable list__item__line-height" modifier="chevron">Sorveterias e Lanches</ons-list-item>
+      <ons-list-item onclick="myNavigator.pushPage('categorias/categoria/alimentos/acougues.html', { animation : 'slide' } )" class="list__item--tappable list__item__line-height" modifier="chevron">Açougues, Abatebouros e Peixarias</ons-list-item>
+   
+    
+      
+      
+    </ons-list>
+  </ons-page>
+  </navigator>
+    </section>
+    
+</ons-page>
+
+</ons-page>
+

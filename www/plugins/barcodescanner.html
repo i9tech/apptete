@@ -1,0 +1,43 @@
+<ons-page ng-controller="BarcodescannerController">
+    
+    <ons-toolbar>
+    <div class="left"><ons-back-button>Back</ons-back-button></div>
+    <div class="center">{{item.title}}</div>
+    </ons-toolbar>
+        
+    <section>
+        
+        <div style="margin:10px;">
+        <ons-button modifier="large--cta" ng-click="scan()">Scan</ons-button>
+        </div>
+        
+        <ons-list class="list-top">
+            <ons-list-item>
+                <ons-row>
+                <ons-col>Result</ons-col>
+                <ons-col class="right">{{result.text}}</ons-col>
+                </ons-row>
+            </ons-list-item>
+            <ons-list-item>
+                <ons-row>
+                <ons-col width="10%">Format</ons-col>
+                <ons-col class="right">{{result.format}}</ons-col>
+                </ons-row>
+            </ons-list-item>
+            <ons-list-item>
+                <ons-row>
+                <ons-col>Cancelled</ons-col>
+                <ons-col class="right">{{result.cancelled}}</ons-col>
+                </ons-row>
+            </ons-list-item>
+            <ons-list-item>
+                <ons-row>
+                <ons-col>Error</ons-col>
+                <ons-col class="right">{{error}}</ons-col>
+                </ons-row>
+            </ons-list-item>
+        </ons-list>
+
+    </section>
+    
+</ons-page>

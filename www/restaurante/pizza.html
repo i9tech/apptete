@@ -1,0 +1,1005 @@
+
+  <ons-toolbar ng-controller="DeliveryController" modifier="transparent">
+    <div class="right">
+      <ons-toolbar-button>Pizzas</ons-toolbar-button>
+    </div>
+    <div class="left">
+      <ons-back-button><ons-icon icon="ion-arrow-left-c" style="color: white; font-size: 28px;" fixed-width="false"></ons-icon></ons-back-button>
+    </div>
+  </ons-toolbar>
+
+
+
+<ons-page  style="top: -28px;" >
+
+
+
+    <style type="text/css">
+        .item {
+  padding: 10px;
+  line-height: 1;
+  height: 144px;
+  overflow: hidden;
+  box-shadow: 0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12),0 5px 5px -3px rgba(0,0,0,.2);
+  background: transparent !important;
+}
+
+.item-thum-pizza {
+  width: 118px;
+    margin-left: -10px;
+    height: 100px;
+    border-radius: 4px;
+}
+
+.card-name-pizza {
+    font-weight: 600;
+    font-size: 42px;
+    padding: 159px 0 8px 0;
+    text-align: center;
+}
+
+.item-title {
+  font-size: 21px;
+    font-weight: 500;
+    margin-left: 17px;
+}
+
+.item-desc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.3;
+  margin: 4px 0 0 0;
+  padding: 0 30px 0 0;
+  max-height: 36px;
+  overflow: overlay;
+}
+
+.item-label {
+  font-size: 12px;
+  color: #999;
+  float: right;
+}
+    </style>
+
+
+
+    <section style="padding: 10px;">
+
+    <ons-page ng-controller="DeliveryController" >
+
+       <section >
+
+
+          <ons-list style="padding-top: 15px;">
+
+         <ons-list-item  modifier="chevron" class="item" >
+                  <ons-row>
+                      <ons-col width="100px">
+                          <img ng-src="{{item.custom_fields.listfy_imagempizza[0]}}"></img>
+
+                      </ons-col>
+                      <ons-col>
+                           <header style="margin-left: 16px;" >
+                              <span class="item-title">{{item.custom_fields.listfy_saborpizza[0]}}</span>
+                          </header>
+                          <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[0]}}</p>
+                      </ons-col>
+                  </ons-row>
+              </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[1]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[1]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[1]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[2]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[2]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[2]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[3]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[3]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[3]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[4]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[4]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[4]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[5]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[5]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[5]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[6]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[6]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[6]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[7]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[7]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[7]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[8]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[8]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[8]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[9]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[9]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[9]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[10]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[10]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[10]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[11]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[11]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[11]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[12]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[12]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[12]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[12]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[13]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[13]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[14]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[14]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[14]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[15]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[15]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[15]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[16]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[16]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[16]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[17]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[17]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[17]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[18]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[18]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[18]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[19]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[19]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[19]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[20]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[20]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[20]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[21]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[21]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[21]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[22]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[22]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[22]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[23]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[23]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[23]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[24]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[24]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[24]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[25]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[25]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[25]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[26]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[26]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[26]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[27]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[27]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[27]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[28]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[28]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[28]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[29]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[29]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[29]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[30]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[30]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[30]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[31]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[31]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[31]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[32]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[32]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[32]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[33]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[33]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[33]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[34]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[34]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[34]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[35]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[35]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[35]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[36]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[36]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[36]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[37]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[37]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[37]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[38]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[38]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[38]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[39]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[39]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[39]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[40]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[40]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[40]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[41]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[41]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[41]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[42]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[42]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[42]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[43]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[43]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[43]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[44]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[44]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[44]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[45]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[45]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[45]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[46]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[46]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[46]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[47]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[47]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[47]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[48]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[48]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[48]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[49]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[49]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[49]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[50]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[50]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[50]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[51]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[51]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[51]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[52]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[52]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[52]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[53]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[53]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[53]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[54]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[54]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[54]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[55]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[55]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[55]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[56]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[56]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[56]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[57]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[57]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[57]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[58]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[58]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[58]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[59]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[59]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[59]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+      <ons-list-item  modifier="chevron" class="item" >
+          <ons-row>
+              <ons-col width="100px">
+                  <img ng-src="{{item.custom_fields.listfy_imagempizza[60]}}"></img>
+
+              </ons-col>
+              <ons-col>
+                   <header style="margin-left: 16px;" >
+                      <span class="item-title">{{item.custom_fields.listfy_saborpizza[60]}}</span>
+                  </header>
+                  <p style="margin-left: 18px;line-height: 15px; margin-top: 8px;">{{item.custom_fields.listfy_ingredientespizza[60]}}</p>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+
+  </ons-list>
+
+
+
+
+
+
+</ons-page>
+
+
+
+
+    </section>
+
+</ons-page>

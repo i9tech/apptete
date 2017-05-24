@@ -1,0 +1,48 @@
+<ons-page  ng-controller="EscolaController"   >
+
+
+    <ons-toolbar style="background:#008ae2;">
+        <div class="left"><ons-back-button>Voltar</ons-back-button></div>
+        <div class="right" style="padding-right:10px;"><ons-icon style="margin-top: -6px; margin-right: 10px;" icon="fa-university" size="25px"></ons-icon>Estrutura</div>
+    </ons-toolbar>
+
+
+
+    
+
+
+
+        <section style="padding: 10px;">
+
+
+            <ons-page >
+
+                <section >
+
+
+                    <ons-list >
+                       
+
+                            <ons-list >
+
+
+                 <ons-list-item ng-repeat="(key, value) in estrutura " modifier="chevron">
+                    <div class="prop-desc">
+                <ons-icon style="color: #008ae2; position: absolute;" icon="fa-check" size="25px"></ons-icon>
+                        <h4  style="font-weight: 600; margin: 0px 30px;">{{value}}</h4>
+                </ons-list-item>
+
+               
+
+                        </ons-list>
+
+                       
+
+
+            </ons-page>
+
+
+
+        </section>
+
+    </ons-page>

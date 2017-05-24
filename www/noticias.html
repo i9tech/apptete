@@ -1,0 +1,74 @@
+<ons-page ng-controller="PostsController">
+
+    
+
+    <style type="text/css">
+        .item {
+  padding: 10px;
+  line-height: 1;
+  height: 91px;
+  overflow: hidden;
+}
+
+.item-thum {
+  background-color: #ccc;
+  width: 70px;
+  height: 70px;
+  border-radius: 4px;
+}
+
+.item-title {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.item-desc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.3;
+  margin: 4px 0 0 0;
+  padding: 0 30px 0 0;
+  max-height: 30px;
+}
+
+.item-label {
+  font-size: 12px;
+  color: #999;
+  float: right;
+}
+    </style>
+
+
+
+   
+    
+    <section style="padding: 10px;">
+
+
+        
+    <ons-page ng-controller="PostsController">
+
+       <section >     
+
+  <ons-list ng-repeat="post in posts ">
+    <ons-list-item modifier="chevron" class="item" ng-click="showDetail($index)">
+      <ons-row>
+        <ons-col width="80px">
+          <img ng-src="{{post.thumbnail_images.thumbnail.url}}" class="item-thum"></img>
+        </ons-col>
+        <ons-col>
+          <header>
+            <span class="item-title">{{post.categories[0].title}}</span>
+            
+          </header>
+          <div ng-show="item.desc==''">
+            <p><span style='opacity: 0.7;'><ons-icon icon='fa-spinner' spin='true'></ons-icon> Carregando...</p></span></div>
+          <p class="item-desc">{{post.title}}</p>
+        </ons-col>
+      </ons-row>
+    </ons-list-item>
+  </ons-list>
+</ons-page>
+
+</ons-page>
+

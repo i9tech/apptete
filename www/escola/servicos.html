@@ -1,0 +1,41 @@
+    <ons-page ng-controller="EscolaController"  >
+    <ons-toolbar style="background:#fffc01;">
+        <div class="left"><ons-back-button>Voltar</ons-back-button></div>
+        <div class="center"><ons-icon style="margin-top: -6px; margin-right: 10px;" icon="fa-star" size="25px"></ons-icon>Serviços extra curriculares</div>
+    </ons-toolbar>
+
+
+        <section style="padding: 10px;">
+
+
+            <ons-page >
+
+                <section >
+
+
+                    <ons-list >
+
+
+                            <ons-list >
+
+
+                 <ons-list-item ng-repeat="servico in servicos track by $index "   modifier="chevron">
+                    <div  class="prop-desc">
+                <ons-icon style="color: #fffc01; position: absolute;" icon="fa-star" size="25px"></ons-icon>
+                        <h4  style=" margin: 0px 30px;">{{servico}}</h4>
+                        </div>  
+              </ons-list-item>
+               
+
+                        </ons-list>
+
+                       
+
+
+            </ons-page>
+
+
+
+        </section>
+
+    </ons-page>

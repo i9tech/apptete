@@ -1,0 +1,50 @@
+<ons-navigator title="Cabelo" id="myNavigator" ng-controller="SalaoController"   >
+
+
+    <ons-toolbar style="background:#ec1477;">
+        <div class="left"><ons-back-button>Voltar</ons-back-button></div>
+        <div class="center" ></div>
+        <div class="right" style="    margin-right: 10px; font-size: 26px; font-weight: 600;">Depilação</div>
+    </ons-toolbar>
+
+
+
+    <ons-page  style="top: -28px;" >
+
+
+
+        <section style="padding: 10px;">
+
+
+            <ons-page >
+
+                <section >
+
+                <ons-row>
+                   <ons-col width="100%">
+                      <img ng-src="{{item.thumbnail_images.medium.url}}" ></img>
+                   </ons-col>
+               </ons-row>
+
+                    <ons-list>
+                        <ons-list-header style="background: #d0d0d0; color: #000000; font-size: 19px;">
+                        <ons-icon style="margin-top: -6px; margin-right: 10px;" icon="fa-gift" size="25px"></ons-icon>Promoções</ons-list-header>
+
+                        <ons-list-item ng-repeat="(key, value) in depilacao " modifier="chevron">
+                    <div class="prop-desc">
+                        <h4  style="font-weight: 600; margin: 0px 0px;">{{value}}</h4>
+                </ons-list-item>
+               
+
+                        </ons-list>
+
+                       
+
+
+            </ons-page>
+
+
+
+        </section>
+
+    </ons-page>

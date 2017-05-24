@@ -1,0 +1,120 @@
+<ons-navigator  id="myNavigator" >
+<ons-page class="center" ng-controller="MaisNoticiasController">
+
+<style type="text/css">
+
+.feeds-categories-view .feed-category .category-bg {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(39, 44, 48, 0.3) 40%, rgba(62, 69, 76, 0.3) 60%, rgba(85, 94, 104, 0.3)); }
+
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+  width: 100%; }
+
+.feeds-categories-view .categories-list {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+
+.col {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: block;
+  padding: 5px;
+  width: 100%; }
+
+.col-50 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 50%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 50%;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%; }
+
+	.feeds-categories-view {
+  background-color: #EAEAEA !important; }
+  .feeds-categories-view .categories-list {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .feeds-categories-view .feed-category {
+    height: -webkit-calc(50vw - 15px);
+    height: calc(50vw - 15px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    position: relative;
+    display: block; }
+    .feeds-categories-view .feed-category .category-image {
+      width: 100%;
+      height: 100%;
+      border-radius: 2px; }
+    .feeds-categories-view .feed-category .category-bg {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(39, 44, 48, 0.3) 40%, rgba(62, 69, 76, 0.3) 60%, rgba(85, 94, 104, 0.3)); }
+    .feeds-categories-view .feed-category .category-title {
+      color: #FFFFFF;
+      position: absolute;
+      top: 2px;
+      left: 8px;
+      font-weight: 500;
+      text-transform: capitalize; }
+</style>
+
+
+      <ons-toolbar>
+      <div class="left">
+      <ons-toolbar-button onclick="menu.toggleMenu()">
+      <ons-icon icon="bars">
+      </ons-toolbar-button>
+      </div>
+      <div class="center">Notícias</div>
+      </ons-toolbar>
+
+<section ng-controller="MaisNoticiasController" >
+
+<ons-row align="center" class="status-message">
+            <ons-col>
+            <span class="loading"><img style="width: 40%; margin-left: 100px;" src="img/load.gif"></span>
+            <span ng-bind="msg"></span>
+            </ons-col>
+        </ons-row>
+
+
+  <ion-view class="feeds-categories-view">
+    <div class="categories-list">
+      <div style="padding-bottom: 10px;" ng-repeat="post in posts" >
+        <a class="feed-category" >
+          <pre-img ratio="_1_1" helper-class="square-image">
+            <img ng-click="showDetail($index)" class="category-image" ng-src="{{post.thumbnail_images.medium_large.url}}" spinner-on-load>
+          </pre-img>
+          <div class="category-bg"></div>
+          <span ng-click="showDetail($index)" class="category-title">{{post.title}}</span>
+        </a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
+  
+
+  </section>

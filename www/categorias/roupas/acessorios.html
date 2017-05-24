@@ -1,0 +1,73 @@
+<ons-navigator id="myNavigator" ng-controller="RoupaController"   >
+
+
+    <ons-toolbar style="background:#4b03e5;">
+        <div class="left"><ons-back-button>Voltar</ons-back-button></div>
+        <div class="center" ></div>
+        <div class="right" style="    margin-right: 10px; font-size: 26px; font-weight: 600;">Acessórios</div>
+    </ons-toolbar>
+
+
+
+    <ons-page >
+
+
+
+        <section >
+
+        <style type="text/css">
+            .masonry { /* Masonry container */
+    column-count: 2;
+    column-gap: 1em;
+        padding-left: 5px;
+    padding-right: 24px;
+}
+
+.item { /* Masonry bricks or child elements */
+    background-color: #eee;
+    display: inline-block;
+    margin: 0 0 1em;
+    width: 100%;
+}
+.popover__content {
+  width:360px !important;
+  position: fixed;
+  }
+        </style>
+
+
+            <ons-page  ng-controller="RoupaController" >
+
+            <div class="masonry">
+              <dir style=" height: auto;"  class="item" ng-repeat="(key, value) in imagemace "  >
+                <div  >
+                   <div style="color: #fff;padding: 0px;" ng-click="setarurl(this)" class="mdl-card__title" style="color: #fff;">
+                    <img ng-click="popover.show($event)" src="{{value}}"></img>
+                   </div>
+                </div>
+              </div>
+             
+             
+            </div>
+
+             <ons-popover style="position: inherit;" direction="up" var="popover">
+                          <div style="padding: 10px; text-align: center;">
+                            <p id="urlimg" style=" background: #000;">
+                              <img   src="{{urlimg}}"></img>
+                            </p>
+                            <p>
+                              <ons-button ng-click="popover.hide()">Fechar</ons-button>
+                            </p>
+                          </div>
+                          
+              </ons-popover>
+
+
+
+            </ons-page>
+
+
+
+        </section>
+
+    </ons-page>

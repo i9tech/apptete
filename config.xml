@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.listfy.diasdavila" version="1.6.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Listfy</name>
+    <description>
+    A cidade em suas mãos 
+    </description>
+
+    <author href="http://i9techsolucoes.com.br" email="vinicio@i9techsolucoes.com.br">
+      Vinicio Pinheiro
+  </author>
+    <content src="index.html" />
+
+    <!-- Allow links to example.com -->
+    <allow-navigation href="http://listfy.com.br/*" />
+    
+    <!-- Wildcards are allowed for the protocol, as a prefix
+         to the host, or as a suffix to the path -->
+    
+    
+    <!-- A wildcard can be used to whitelist the entire network,
+         over HTTP and HTTPS.
+         *NOT RECOMMENDED* -->
+    <allow-navigation href="*" />
+    
+    <!-- The above is equivalent to these three declarations -->
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
+    <allow-navigation href="data:*" />
+     <access origin="tel:*" launch-external="yes" />
+    <access origin="mailto:*" launch-external="yes" />
+    <access origin="whatsapp:*" launch-external="yes" />
+
+   <!-- for iOS -->
+<feature name="SocialSharing">
+  <param name="ios-package" value="SocialSharing" />
+</feature>
+<!-- for Android (you will find one in res/xml) -->
+<feature name="SocialSharing">
+  <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
+</feature>
+<!-- for Windows Phone -->
+<feature name="SocialSharing">
+  <param name="wp-package" value="SocialSharing"/>
+</feature>
+
+<preference name="StatusBarOverlaysWebView" value="true" />
+<preference name="StatusBarBackgroundColor" value="#051271" />
+<preference name="orientation" value="portrait" />
+<preference name="webviewbounce" value="false" />
+<preference name="UIWebViewBounce" value="false" />
+<preference name="DisallowOverscroll" value="true" />
+<preference name="BackupWebStorage" value="none" />
+<preference name="target-device" value="universal" />
+<preference name="android-minSdkVersion" value="16" />
+<preference name="android-targetSdkVersion" value="21" />
+<preference name="clickable" value="true" />
+
+
+<!-- Core plugins -->
+    <plugin name="pushwoosh-cordova-plugin" />
+    <plugin name="cordova-plugin-splashscreen" />
+    <plugin name="cordova-plugin-statusbar" />
+    <plugin name="cordova-plugin-whitelist" />
+    <plugin name="cordova-plugin-x-socialsharing" />
+    <plugin name="cordova-plugin-email-composer" />
+    <plugin name="org.apache.cordova.device" />
+    <plugin name="org.apache.cordova.dialogs" />
+    <plugin name="org.apache.cordova.geolocation" />
+    <plugin name="org.apache.cordova.inappbrowser" />
+
+
+
+<feature name="StatusBar">
+        <param name="ios-package" onload="true" value="CDVStatusBar" />
+</feature>
+
+  <platform name="winphone" />
+  <platform name="ios" />
+
+<icon src="icon.png" />
+
+<icon gap:platform="ios" height="60" width="60" src="res/icons/ios/icon-60.png" />
+<icon gap:platform="ios" height="120" width="120" src="res/icons/ios/icon-60-2x.png" />
+<icon gap:platform="ios" height="180" width="180" src="res/icons/ios/icon-60-3x.png" />
+<icon gap:platform="ios" height="76" width="76" src="res/icons/ios/icon-76.png" />
+<icon gap:platform="ios" height="152" width="152" src="res/icons/ios/icon-76-2x.png" />
+<icon gap:platform="ios" height="40" width="40" src="res/icons/ios/icon-40.png" />
+<icon gap:platform="ios" height="80" width="80" src="res/icons/ios/icon-40-2x.png" />
+<icon gap:platform="ios" height="57" width="57" src="res/icons/ios/icon-57.png" />
+<icon gap:platform="ios" height="114" width="114" src="res/icons/ios/icon-57-2x.png" />
+<icon gap:platform="ios" height="72" width="72" src="res/icons/ios/icon-72.png" />
+<icon gap:platform="ios" height="144" width="144" src="res/icons/ios/icon-72-2x.png" />
+<icon gap:platform="ios" height="29" width="29" src="res/icons/ios/icon-small.png" />
+<icon gap:platform="ios" height="58" width="58" src="res/icons/ios/icon-small-2x.png" />
+<icon gap:platform="ios" height="50" width="50" src="res/icons/ios/icon-50.png" />
+<icon gap:platform="ios" height="100" width="100" src="res/icons/ios/icon-50-2x.png" />       
+
+
+</widget>
+
+
+
+
+

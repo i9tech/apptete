@@ -1,0 +1,200 @@
+      
+ 
+    <ons-tabbar>
+      <ons-tab page="profissional.html" icon="ion-android-home" label="Sobre" active="true">
+      </ons-tab>
+      <ons-tab page="galeria.html" icon="fa-instagram" label="Galeria">
+
+    </ons-tabbar>
+
+
+    <ons-template id="profissional.html">
+  
+  <ons-page  modifier="shop-details"    ng-controller="ProfissionalController" >
+
+    <ons-toolbar >
+    <div class="left"><ons-back-button>Voltar</ons-back-button></div>
+    <div class="center" ng-bind-html="item.title" ></div>
+    </ons-toolbar>
+
+    <div  ><p ><img style="width: 100%;" ng-src=""/></p>
+    </div>
+
+    <ons-carousel swipeable overscrollable auto-scroll style="top: 18px;right: 0px;left: 0px;bottom: 0px;height: 220px;">
+                <ons-carousel-item ng-repeat="(key, value) in slidesobre " >
+                  <div ><p ><img style="width: 100%; height: 165px;" ng-src="{{value}}"/></p></div>
+                </ons-carousel-item>
+    </ons-carousel>
+      
+
+
+        <ons-list style="border-top: none"><ons-list-item style="line-height: 1; padding: 0;">
+          <ons-row class="action">
+
+            <ons-col class="action-col" style="color: #069c39;">
+              <div class="action-icon">
+                <a style="color: #007d38;" href="tel:{{item.custom_fields.glocal_company_doc_phone[0]}}">
+                <ons-icon icon="ion-android-call"></ons-icon></div>
+              </a>
+              <div class="action-label">Ligar</div>
+            </ons-col>
+
+            <ons-col class="action-col" style="color: #ffdb00;">
+              <div class="action-icon">
+                <a style="color: #007d38;" href="whatsapp://send?text={{item.title}}
+                tel:{{item.custom_fields.glocal_company_doc_phone[0]}}
+                {{item.custom_fields.glocal_company_soc_fax[0]}}
+             ">
+               <ons-icon icon="ion-social-whatsapp"></ons-icon></div>
+              </a>
+              <div class="action-label">Enviar</div>
+            </ons-col>
+
+            <ons-col class="action-col" style="color: #c54c17;">
+              <div class="action-icon"><ons-icon icon="ion-share"></ons-icon></div>
+              <div class="action-label" ng-click="sharePost()">Compartilhar</div>
+            </ons-col>
+
+            <ons-col class="action-col" style="color: #069c39;">
+              <div class="action-icon">
+                <a href="{{item.custom_fields.glocal_company_soc_web[0]}}">
+                  <ons-icon icon="ion-android-globe"></ons-icon></div>
+              </a>
+              <div class="action-label">Website</div>
+            </ons-col>
+
+          </ons-row>
+        </ons-list-item></ons-list>
+
+        <ons-list style="margin-top: 12px;">
+
+        <ons-list-item style="min-height: 60px; background: #f4f4f4;" modifier="chevron">
+            <div class="prop-desc">
+              <ons-icon icon="fa-info" class="circle-icon" style="padding: 12px; background: #673ab7; margin-bottom: 32px;" size="23px"></ons-icon>
+              <p style="font-size: 16px; margin-top: -55px; margin-left: 38px; line-height: 18px;">{{item.custom_fields.glocal_company_doc_desc[0]}}
+            </div>
+          </ons-list-item>
+
+          <ons-list-item style=" min-height: 60px; background: #fff;" modifier="chevron">
+            <div class="prop-desc">
+              <ons-icon icon="fa-map-marker" class="circle-icon" style="margin-bottom: 19px; padding: 11px; background: #F44336" size="17px"></ons-icon>
+              <p style="margin-top: -61px; margin-left: 38px;">{{item.custom_fields.glocal_address_name[0]}}</p>
+            </div>
+          </ons-list-item>
+
+          <ons-list-item style="background: #f4f4f4;" modifier="chevron">
+            <div class="prop-desc">
+              <ons-icon icon="fa-phone-square" class="circle-icon" style="padding: 12px; background: #4caf50" size="15px"></ons-icon>
+              <p style="font-size: 18px; margin-top: -29px; margin-left: 40px;">{{item.custom_fields.glocal_company_doc_phone[0]}}
+            </div>
+          </ons-list-item>
+
+
+          <ons-list-item style=" min-height: 60px;" modifier="chevron">
+            <div class="prop-desc">
+          <ons-icon icon="fa-envelope" class="circle-icon" style="padding: 11px; background: #9e9e9e; margin-bottom: 11px;" size="16px"></ons-icon>
+             <p style="font-size: 15px; margin-top: -39px; margin-left: 42px;"> {{item.custom_fields.glocal_company_soc_email[0]}}
+            </div>
+          </ons-list-item>
+
+          <ons-list-item style=" min-height: 60px; background: #f4f4f4;" modifier="chevron">
+            <div class="prop-desc" style="padding-bottom: 42px; padding-top: 8px;">
+              <ons-icon icon="fa-clock-o" class="circle-icon" style="padding: 11px; background: #ff9800" size="16px"></ons-icon> 
+            <p style=" font-size: 16px;margin-top: -49px; margin-left: 46px;"> {{item.custom_fields.glocal_company_soc_openhrs1[0]}}
+            <p style=" font-size: 16px; margin-top: -24px; margin-left: 46px;"> {{item.custom_fields.glocal_company_soc_openhrs2[0]}}
+            <p style="font-size: 16px; margin-top: -23px; margin-left: 46px;"> {{item.custom_fields.glocal_company_soc_openhrs3[0]}}
+              
+            </div>
+          </ons-list-item>
+
+          <ons-list-item modifier="chevron">
+            <div class="prop-desc">
+              <ons-list-header style="margin-top: -14px;"><ons-icon icon="fa-facebook-square" class="circle-icon" style=" background: #3f51b5; margin-left: -15px; font-size: 16px; padding: 12px;" size="16px"></ons-icon>  <p style="font-size: 18px; margin-top: -31px; margin-left: 33px;">Curta Nossa Página:</ons-list-header>
+              <div style="width: 360px; padding-top: 6px; margin-left: -24px; " ng-bind-html="facebook">
+                
+              </div>
+            </div>
+          </ons-list-item>
+
+          <ons-list-item modifier="chevron">
+            <div class="prop-desc">
+              <ons-list-header style="margin-top: -14px;"><ons-icon icon="fa-instagram" class="circle-icon" style=" background: #e91e63; margin-left: -19px; padding: 11px;" size="19px"></ons-icon>
+               <p style="font-size: 23px; margin-top: -33px; margin-left: 55px;">{{item.custom_fields.glocal_company_soc_tw[0]}} 
+
+               <div style="width: 360px; padding-top: 25px; margin-left: -24px; " ng-bind-html="instagram"> 
+
+              </ons-list-header>
+              <div >
+
+              </div>
+            </div>
+          </ons-list-item>
+          </ons-list>
+
+      </ons-page>
+
+
+</ons-template>
+
+<ons-template id="galeria.html">
+
+  <ons-page  modifier="shop-details"    ng-controller="ProfissionalController" >
+
+  <ons-toolbar>
+    <div class="left"><ons-back-button>Voltar</ons-back-button></div>
+    <div class="center" ></div>
+    <div class="right" style="padding-right: 12px; font-size: 23px;" >Galeria</div>
+  </ons-toolbar>
+
+  <section>
+           <style type="text/css">
+            .masonry { /* Masonry container */
+    column-count: 2;
+    column-gap: 2em;
+        padding-left: 5px;
+    padding-right: 24px;
+    padding-top: 64px;
+}
+
+.item { /* Masonry bricks or child elements */
+    background-color: #eee;
+    display: inline-block;
+    margin: 0 0 1em;
+    width: 100%;
+}
+
+.popover__content {
+  width:360px !important;
+  position: fixed;
+  }
+
+        </style>
+
+
+            <ons-page   >
+
+            <div class="masonry">
+              <dir style=" height: auto;"  class="item" ng-repeat="(key, value) in galeria "  >
+                <div  >
+                   <div ng-click="setarurl(this)" style="color: #fff;padding: 0px;" class="mdl-card__title" style="color: #fff;">
+                    <img  ng-click="popover.show($event)" src="{{value}}"></img>
+                   </div>
+                   
+                </div>
+              </div>
+
+              <ons-popover style="position: inherit;" direction="up" var="popover">
+                          <div style="padding: 10px; text-align: center;">
+                            <p id="urlimg" style=" background: #000;">
+                              <img   src="{{urlimg}}"></img>
+                            </p>
+                            <p>
+                              <ons-button ng-click="popover.hide()">Fechar</ons-button>
+                            </p>
+                          </div>
+                          
+              </ons-popover>
+  </section>
+
+</ons-template>
+

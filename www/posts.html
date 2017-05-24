@@ -1,0 +1,49 @@
+<ons-page ng-controller="PostsController">
+    
+    <ons-toolbar>
+    <div class="left"><ons-back-button>Back</ons-back-button></div>
+    <div class="center">WP JSONaa</div>
+    </ons-toolbar>
+    
+    <ons-pull-hook ng-action="load($done)" var="loader">
+        <span ng-switch="loader.getCurrentState()">
+        <span ng-switch-when="initial"><ons-icon size="35px" icon="ion-arrow-down-a"></ons-icon> Pull down to refresh</span>
+        <span ng-switch-when="preaction"><ons-icon size="35px" icon="ion-arrow-up-a"></ons-icon> Release to refresh</span>
+        <span ng-switch-when="action"><ons-icon size="35px" spin="true" icon="ion-load-d"></ons-icon> Loading data...</span>
+        </span>
+    </ons-pull-hook>
+
+    <section style="padding: 10px;">
+
+        <ons-row align="center">
+            <ons-col>
+            <span class="loading"><i class="fa fa-spin fa-circle-o-notch"></i> Loading</span>
+            <span ng-bind="msg"></span>
+            </ons-col>
+        </ons-row>
+
+        <div ng-repeat="post in posts | limitTo: paginationLimit()" sliding-menu-ignore="true">
+        <ons-row style="padding: 0 0 20px 0;">
+            <ons-col>
+                <h3 class="title" ng-bind-html="post.title" ng-click="showDetail($index)"></h3>
+
+                <a ng-click="showDetail($index)">
+                <img class="post-teaser-image" ng-src="{{post.attachments[0].images.thumbnail.url}}" ng-show="{{post.attachments.length}}"/>
+                </a>
+
+                <p class="post-excerpt" ng-bind-html="post.excerpt"></p>
+                <ons-button class="post-teaser" modifier="quiet" ng-click="showDetail($index)">Read more</ons-button>
+
+            </ons-col>
+        </ons-row>
+        </div>
+
+        <ons-row align="center">
+            <ons-col>
+            <ons-button ng-show="hasMoreItems()" ng-click="showMoreItems()" class="post-show-more"><i class="fa fa-angle-double-down more-icon"></i>Show more</ons-button>
+            </ons-col>
+        </ons-row>
+
+    </section>
+    
+</ons-page>

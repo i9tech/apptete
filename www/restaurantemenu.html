@@ -1,0 +1,47 @@
+
+<ons-page ng-controller="SettingsController" sliding-menu-ignore="true">
+
+    <ons-toolbar>
+    <div class="left"><ons-back-button>Voltar</ons-back-button></div>
+    <div class="center">{{category.title}}</div>
+    </ons-toolbar>
+
+    <section>
+        <ul class="list list-top">
+
+        <li class="list__item" ng-repeat="setting in settings.options">
+        {{setting.name}}
+        <label class="switch switch--list-item">
+        <input type="checkbox" class="switch__input" name="setting.name" ng-model="setting.value" ng-change="saveSettings()">
+        <div class="switch__toggle"></div>
+        </label>
+        </li>
+        </ul>
+
+        <ul class="list">
+            <ons-list-header>Range Input</ons-list-header>
+
+            <li class="list__item">
+            <div class="list-item-left">
+            <i class="fa fa-volume-down lower"></i>
+            </div>
+            <div class="list-item-center">
+            <span class="list__item__line-height">
+            <input type="range" class="range range-center" value="{{settings.range}}" ng-model="settings.range" ng-change="saveSettings()">
+            </span>
+            </div>
+            <div class="list-item-right">
+            <i class="fa fa-volume-up"></i>
+            </div>
+            </li>
+        </ul>
+
+        <ons-list>
+            <ons-list-header>Local Storage</ons-list-header>
+            <ons-list-item modifier="tappable" ng-click="clearLocalStorage()">
+            Reset RSS Feeds
+            </ons-list-item>
+        </ons-list>
+    </section>
+
+</ons-page>

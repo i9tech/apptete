@@ -1,0 +1,71 @@
+<ons-page class="map" sliding-menu-ignore="true" ng-controller="GeolocationController">
+    
+    <ons-toolbar>
+    <div class="left"><ons-back-button>Back</ons-back-button></div>
+    <div class="center">{{item.title}}</div>
+    </ons-toolbar>
+     
+    <div class="row">
+        <div id="map-canvas" ui-map="model.map" ui-options="mapOptions" style="height:200px; width:100%;" ui-event="{'map-idle' : 'onMapIdle()'}">
+        </div>
+        <div ng-repeat="marker in markers" ui-map-marker="markers[$index]" ui-event="{'map-click': 'markerClicked(marker)'}">
+        </div>
+    </div>
+
+    <ons-list class="list-top" ng-show="showResult()">
+        <ons-list-item>
+            <ons-row>
+            <ons-col>Latitude</ons-col>
+            <ons-col class="right">{{latitude}}</ons-col>
+            </ons-row>
+        </ons-list-item>
+        <ons-list-item>
+            <ons-row>
+            <ons-col>Longitude</ons-col>
+            <ons-col class="right">{{longitude}}</ons-col>
+            </ons-row>
+        </ons-list-item>
+        <ons-list-item>
+            <ons-row>
+            <ons-col>Altitude</ons-col>
+            <ons-col class="right">{{altitude}}</ons-col>
+            </ons-row>
+        </ons-list-item>
+        <ons-list-item>
+            <ons-row>
+            <ons-col>Accuracy</ons-col>
+            <ons-col class="right">{{accuracy}}</ons-col>
+            </ons-row>
+        </ons-list-item>
+        <ons-list-item>
+            <ons-row>
+            <ons-col>Altitude Accuracy</ons-col>
+            <ons-col class="right">{{altitudeAccuracy}}</ons-col>
+            </ons-row>
+        </ons-list-item>
+        <ons-list-item>
+            <ons-row>
+            <ons-col>Heading</ons-col>
+            <ons-col class="right">{{heading}}</ons-col>
+            </ons-row>
+        </ons-list-item>
+        <ons-list-item>
+            <ons-row>
+            <ons-col>Speed</ons-col>
+            <ons-col class="right">{{speed}}</ons-col>
+            </ons-row>
+        </ons-list-item>
+        <ons-list-item>
+            <ons-row>
+            <ons-col width="20%">Timestamp</ons-col>
+            <ons-col class="right">{{timestamp}}</ons-col>
+            </ons-row>
+        </ons-list-item>
+    </ons-list>
+
+    <div class="row" ng-show="!showResult()">
+    Error : {{error}}
+    Error Code: {{error.code}}
+    </div> 
+
+</ons-page>

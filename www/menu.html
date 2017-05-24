@@ -1,0 +1,22 @@
+
+<ons-page ng-controller="MenuController">
+
+    <ons-toolbar style="height: 172px; background: url(img/menu.jpg);">
+    <div class="center"> </div>
+    </ons-toolbar>
+
+    <ons-list class="list-top" style="padding-top: 129px;">
+
+        <ons-list-item modifier="chevron" ng-repeat="item in items" ng-click="showDetail($index)">
+            <ons-row>
+                <ons-col width="15%">
+                <ons-icon icon="{{item.icon}}"></ons-icon>
+                </ons-col>
+                <ons-col>
+                {{item.title}}
+                </ons-col>
+            </ons-row>
+        </ons-list-item>
+    </ons-list>
+
+</ons-page>
