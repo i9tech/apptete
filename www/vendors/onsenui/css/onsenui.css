@@ -74,8 +74,8 @@ ons-bottom-toolbar {
 }
 
 .page, .page__content {
-  background-color: rgb(229, 247, 255) !important !important;
-  background: rgb(229, 247, 255) !important !important;
+  background-color: rgba(155, 170, 255, 0.26) !important !important;
+  background: rgba(155, 170, 255, 0.26) !important !important;
 }
 
 .page__content {
