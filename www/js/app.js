@@ -444,6 +444,7 @@ var app = {
         $scope.item = PostsData.selectedItem;
 
         $scope.content = $sce.trustAsHtml($scope.item.content);
+	$scope.excerpt = $scope.item.excerpt
 
         $scope.loadURL = function (url) {
             //target: The target in which to load the URL, an optional parameter that defaults to _self. (String)
@@ -456,7 +457,7 @@ var app = {
         $scope.sharePost = function () {
 
             var subject = $scope.item.title;
-            var message = $scope.item.content;
+            var message = $scope.item.excerpt;
             message = message.replace(/(<([^>]+)>)/ig,"");
 
             var link = $scope.item.url;
