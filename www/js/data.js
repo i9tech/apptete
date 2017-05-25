@@ -64,7 +64,7 @@ sensationApp.factory('MenuData', function(){
             page: 'home.html'
         },        
         {
-            title: 'Ultimas notícias',
+            title: 'Ultimas Notícias',
             icon: 'th',
             page: 'maisnoticias.html'
         },
@@ -76,7 +76,7 @@ sensationApp.factory('MenuData', function(){
         },
 
         {
-            title: 'O que é o Tête a Tête?',
+            title: 'O que é o Tête à Tête?',
             icon: 'mobile',
             page: 'quemsomos.html'
         }
