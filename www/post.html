@@ -1,5 +1,3 @@
-<ons-navigator var="myNavigator">
-
 <ons-page ng-controller="PostController">
     
     <ons-toolbar>
@@ -13,21 +11,17 @@
 
         <h2 style="line-height: 34px;     padding-left: 6px;" class="title" ng-bind-html="item.title"></h2>       
 
-        <p style="padding-left: 5px; padding-top: 20px;" ng-bind-html="content"></p>
+        <p style=" padding-top: 20px;" ng-bind-html="content"></p>
 
 
-        <ons-speed-dial position="right bottom">
+        <ons-speed-dial ng-click="sharePost()" position="right bottom">
             <ons-fab>
                 <ons-icon
-                        icon="ion-navicon-round"
-                        size="26px"
-                        fixed-width="false"
-                        style="vertical-align:middle;">
+                        icon="ion-android-share-alt"
+                        size="40px"
+                        fixed-width="false">
                 </ons-icon>
             </ons-fab>
-            <ons-speed-dial-item ng-click="loadURL(item.url)"><ons-ripple></ons-ripple><ons-icon icon="ion-heart"></ons-icon></ons-speed-dial-item>
-            <ons-speed-dial-item><ons-ripple></ons-ripple><ons-icon icon="ion-chatboxes"></ons-icon></ons-speed-dial-item>
-            <ons-speed-dial-item ng-click="sharePost()"><ons-ripple></ons-ripple><ons-icon icon="ion-android-share-alt"></ons-icon></ons-speed-dial-item>
         </ons-speed-dial>
 
         <!--<a class="post-url" ng-href="{{item.url}}">View post</a>-->

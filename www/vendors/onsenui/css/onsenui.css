@@ -74,8 +74,8 @@ ons-bottom-toolbar {
 }
 
 .page, .page__content {
-  background-color: transparent !important;
-  background: transparent !important;
+  background-color: #007aab !important;
+  background: #007aab !important;
 }
 
 .page__content {

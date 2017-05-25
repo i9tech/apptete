@@ -34,7 +34,7 @@ function registerPushwooshAndroid() {
             }
 
             // Display the notification
-            navigator.notification.alert(title,function() {console.log("Notification success")},"Notification","Close");
+            navigator.notification.alert(title,function() {console.log("Notification success")},"Notification","Fechar");
 
             // Stopping geopushes
             //pushNotification.stopGeoPushes();

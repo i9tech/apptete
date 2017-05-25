@@ -1,4 +1,4 @@
-<ons-navigator  id="myNavigator" >
+<ons-navigator var="myNavigator">
 <ons-page class="center" ng-controller="MaisNoticiasController">
 
 <style type="text/css">
@@ -88,7 +88,7 @@
       <ons-icon icon="bars">
       </ons-toolbar-button>
       </div>
-      <div class="center">Notícias</div>
+      <div class="center">Ultímas Notícias</div>
       </ons-toolbar>
 
 <section ng-controller="MaisNoticiasController" >
@@ -104,9 +104,9 @@
   <ion-view class="feeds-categories-view">
     <div class="categories-list">
       <div style="padding-bottom: 10px;" ng-repeat="post in posts" >
-        <a class="feed-category"  ng-click="showDetail($index) >
+        <a class="feed-category"  ng-click="showDetail($index)" >
           <pre-img ratio="_1_1" helper-class="square-image">
-            <img class="category-image" ng-src="{{post.thumbnail_images.medium_large.url}}" spinner-on-load>
+            <img class="category-image" ng-click="showDetail($index)" ng-src="{{post.thumbnail_images.medium_large.url}}" spinner-on-load>
           </pre-img>
           <div class="category-bg"></div>
           <span ng-click="showDetail($index)" class="category-title">{{post.title}}</span>
